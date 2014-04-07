@@ -10,7 +10,7 @@
 
 describe('Functional tests', () => {
 
-    it('should not allow connect without user data)', () => {
+    it('should not allow connect without user data', () => {
         "use strict";
         browser.get('http://localhost:8080/src/main/webapp/chatty.html');
         element(by.id('connectButton')).click();
@@ -18,7 +18,7 @@ describe('Functional tests', () => {
         expect(status.getText()).toContain('fill in');
     });
 
-    it('should not allow connect without user data)', () => {
+    it('should allow connect with user data', () => {
         "use strict";
         browser.get('http://localhost:8080/src/main/webapp/chatty.html');
         element(by.model('userId')).sendKeys('toedter_k3');
